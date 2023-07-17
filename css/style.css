@@ -1,0 +1,128 @@
+:root {
+    --darker: #0d1b2a;
+    --darker-secundary: #1b263b;
+    --darker-terciary: #415a77;
+    --color-font: #f4f1de;
+    --button: #80ed99;
+    --button-hover: #57cc99;
+    --danger: #d90429;
+    --danger-hover: #96071f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--darker);
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+#themeSwitcher {
+    padding: 20px;
+    font-size: 25px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-color: var(--darker-secundary);
+    color: var(--color-font);
+    border: 1px solid var(--color-font);
+    cursor: pointer;
+}
+
+.box-input {
+    position: relative;
+    top: 15px;
+    width: 40%;
+    background-color: var(--darker-terciary);
+    margin: auto;
+    padding: 30px 20px;
+    color: var(--color-font);
+    border-radius: 5px;
+}
+
+#activity {
+    width: 100%;
+    max-width: 250px;
+    height: 30px;
+}
+
+#save {
+    width: 50px;
+    height: 30px;
+    background-color: var(--button);
+    border: 1px solid var(--button-hover);
+    cursor: pointer;
+}
+
+.area-tarefas {
+    position: relative;
+    top: 30px;
+    width: 40%;
+    background-color: var(--darker-terciary);
+    margin: auto;
+    padding: 30px;
+    color: var(--color-font);
+    border-radius: 5px;
+}
+
+.area-tarefas h2 {
+    padding: 5px 10px 30px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#tarefas {
+    list-style-type: decimal;
+    text-align: center;
+}
+
+#tarefas li{
+    padding: 15px;
+    border: 1px solid var(--darker);
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#tarefas li > button{
+    height: 100%;
+    width: 10%;
+    min-width: 30px;
+    position: absolute;
+    font-size: 20px;
+    top: 0px;
+    right: 0px;
+    background-color: var(--danger);
+    border: 1px solid var(--danger-hover);
+    color: #f4f1de;
+    cursor: pointer;
+}
+
+#tarefas li > button:hover{
+    background-color: var(--danger-hover);
+    border: 1px solid var(--danger);
+}
+
+@media screen and (max-width: 500px) {
+    .box-input,
+    .area-tarefas {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .box-input,
+    .area-tarefas {
+        width: 95%;
+    }
+
+    #save {
+        margin-top: 5px;
+    }
+}
